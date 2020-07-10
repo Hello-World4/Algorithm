@@ -18,7 +18,7 @@ def reverse(str):
 def palindrome(str):
     return reverse(str) == str
 
-def BruteFrocetwoSum(arr,target):
+def BruteForcetwoSum(arr,target):
   "Given an array of integers, return indices of the two numbers such that they add up to a specific target."
   for i in range(len(arr)):
     for j in range(i+1,len(arr)):
@@ -27,7 +27,7 @@ def BruteFrocetwoSum(arr,target):
             return i,j
   return -1
 
-def m(arr,target):
+def twosum(arr,target): #o(n)
     dico = {}
     for i in range(len(arr)):
         result = target - arr[i]
