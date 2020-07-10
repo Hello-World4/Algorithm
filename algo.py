@@ -18,7 +18,7 @@ def reverse(str):
 def palindrome(str):
     return reverse(str) == str
 
-def BruteForcetwoSum(arr,target):
+def bruteForcetwoSum(arr,target):
   "Given an array of integers, return indices of the two numbers such that they add up to a specific target."
   for i in range(len(arr)):
     for j in range(i+1,len(arr)):
@@ -35,6 +35,19 @@ def twosum(arr,target): #o(n)
             return [dico[arr[i]], i]
         else:
             dico[result] = i
+
+
+def bubbleSort(arr): #o(n^2)
+    drap = False
+    while drap == False:
+        drap = True
+        for i in range(len(arr)-1):
+            if arr[i] > arr[i+1]:
+                drap = False
+                tmp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = tmp
+    return arr
 
 
 
@@ -71,13 +84,14 @@ def power(x,n): #recursive
 
 
 if __name__ == "__main__":
-    a = [2,11,7,12]
+    a = [20,7,40,1,3,2]
     str = "kayak"
     print(repeat(a))
     print(reverse(str))
     print(palindrome(str))
-    print(BruteFrocetwoSum(a,9))
-    print(m(a,9))
+    print(bruteForcetwoSum(a,9))
+    print(twosum(a,9))
+    print(bubbleSort(a))
 
 
     print(fibo(5))
