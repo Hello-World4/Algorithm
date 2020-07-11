@@ -49,6 +49,17 @@ def bubbleSort(arr): #o(n^2)
                 arr[i+1] = tmp
     return arr
 
+def facto(n):
+    result = 1
+    for i in range(n,0,-1):
+        result *= i
+    return result;
+
+def facto2(n):
+    if n <= 1:
+        return n
+    return n * facto2(n-1)
+
 
 
 def fibo(n): #iterative
@@ -92,6 +103,8 @@ if __name__ == "__main__":
     print(bruteForcetwoSum(a,9))
     print(twosum(a,9))
     print(bubbleSort(a))
+    print(facto2(5))
+    print(facto(5))
 
 
     print(fibo(5))
